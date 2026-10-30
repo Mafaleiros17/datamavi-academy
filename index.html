@@ -1,20 +1,666 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Aprenda inteligência artificial do zero com exemplos práticos, 30 comandos e um plano de 7 dias. E-book da Data Mavi, por Margareth Braghini.">
-<title>Inteligência Artificial Descomplicada | Data Mavi</title>
-<style>
-:root{--navy:#0b1730;--teal:#27d5c0;--ink:#18253b;--muted:#64748b;--bg:#f5f8fc}*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.6}a{color:inherit}.wrap{max-width:1100px;margin:auto;padding:0 24px}header{background:var(--navy);color:white;padding:18px 0;border-bottom:1px solid #33415e}header .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px}header strong{letter-spacing:.12em}header span{font-size:.85rem;color:#b9d5e2}.hero{background:linear-gradient(120deg,#0b1730,#153d56);color:white;padding:75px 0}.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:55px;align-items:center}.eyebrow{color:var(--teal);font-size:.85rem;font-weight:750;letter-spacing:.12em;text-transform:uppercase}h1{font-size:clamp(2.2rem,5vw,4.3rem);line-height:1.12;margin:16px 0 22px;letter-spacing:-.04em}h2{font-size:clamp(1.8rem,3vw,2.5rem);line-height:1.2}p{margin:12px 0 22px}.lead{font-size:1.15rem;color:#dbe8f3;max-width:600px}.button{display:inline-block;background:var(--teal);color:#082338;font-weight:800;padding:15px 27px;border-radius:10px;text-decoration:none;border:0;font-size:1rem}.button[aria-disabled=true]{background:#d6e1e9;color:#344b5c;cursor:not-allowed}.small{font-size:.85rem;color:#aabed0}.book{width:min(100%,310px);min-height:420px;background:linear-gradient(150deg,#0d1b36,#194c5d);border:1px solid #4b8b9b;box-shadow:18px 20px 40px #0005;border-radius:5px;padding:35px 27px;display:flex;flex-direction:column;justify-content:space-between;transform:rotate(2deg);margin:auto}.book .brand{font-size:.75rem;letter-spacing:.18em;color:#9ee6e0}.book .name{font-size:2.25rem;line-height:1.06;font-weight:900;letter-spacing:-.05em}.book .line{height:4px;background:var(--teal);width:60px;margin:18px 0}.book .author{font-size:.83rem;color:#c7e3eb}.section{padding:66px 0}.alt{background:var(--bg)}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{padding:25px;border:1px solid #e0e7ef;border-radius:16px;background:white}.card h3{margin:0 0 10px}.card p{margin:0;color:#536477}.pill{display:inline-block;padding:5px 11px;border-radius:30px;background:#d8f7f1;color:#12665e;font-weight:700;font-size:.85rem}.offer{text-align:center;max-width:680px;margin:auto}.price{font-size:3.2rem;line-height:1.1;font-weight:900;color:var(--navy);margin:16px 0}.note{color:#64748b;font-size:.85rem}.faq details{padding:18px 0;border-bottom:1px solid #e2e8f0}.faq summary{font-weight:700;cursor:pointer}footer{background:#0b1730;color:#c7d6e7;padding:30px 0;font-size:.86rem}footer a{color:#a5e9e0}@media(max-width:760px){.hero{padding:45px 0}.hero-grid{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.book{min-height:360px;max-width:270px}.section{padding:45px 0}header .wrap{align-items:flex-start;flex-direction:column}}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Data Mavi Academy | Educação Digital</title>
+
+    <meta name="description"
+          content="Data Mavi Academy: e-books e conteúdos práticos sobre Inteligência Artificial, tecnologia e produtividade.">
+
+    <style>
+        :root {
+            --azul: #08172e;
+            --azul-claro: #102b4d;
+            --ciano: #00c8e8;
+            --branco: #ffffff;
+            --cinza: #aebed0;
+            --dourado: #f5c76b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--azul);
+            color: var(--branco);
+            line-height: 1.6;
+        }
+
+        header {
+            padding: 25px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            border-bottom: 1px solid #24405e;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: var(--ciano);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: var(--ciano);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 85px 8%;
+            background: linear-gradient(
+                135deg,
+                #08172e,
+                #123b63
+            );
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 5vw, 52px);
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: var(--ciano);
+        }
+
+        .hero p {
+            max-width: 750px;
+            margin: auto;
+            font-size: 18px;
+            color: #d1deeb;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--dourado);
+            color: #08172e;
+            padding: 16px 32px;
+            margin-top: 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #ffe09b;
+            transform: translateY(-2px);
+        }
+
+        section {
+            padding: 70px 8%;
+        }
+
+        .titulo {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        .titulo span {
+            color: var(--ciano);
+        }
+
+        .produto {
+            max-width: 1050px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+            align-items: center;
+            background: var(--azul-claro);
+            padding: 45px;
+            border-radius: 18px;
+        }
+
+        .capa {
+            background: linear-gradient(
+                145deg,
+                #071326,
+                #164a78
+            );
+            border: 2px solid #2378a4;
+            border-radius: 12px;
+            padding: 55px 25px;
+            text-align: center;
+            box-shadow: 0 15px 35px #0005;
+        }
+
+        .capa .marca {
+            color: var(--ciano);
+            font-size: 15px;
+            letter-spacing: 3px;
+        }
+
+        .capa h2 {
+            font-size: 32px;
+            line-height: 1.2;
+            margin: 35px 0 20px;
+        }
+
+        .capa p {
+            color: #c6e8f3;
+        }
+
+        .capa .autora {
+            margin-top: 45px;
+            font-size: 13px;
+            color: var(--dourado);
+        }
+
+        .detalhes h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .detalhes p {
+            color: #d4e0ed;
+            margin-bottom: 20px;
+        }
+
+        .detalhes ul {
+            list-style: none;
+            margin: 25px 0;
+        }
+
+        .detalhes li {
+            margin-bottom: 12px;
+        }
+
+        .detalhes li::before {
+            content: "✓ ";
+            color: var(--ciano);
+            font-weight: bold;
+        }
+
+        .preco {
+            font-size: 38px;
+            color: var(--dourado);
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .beneficios {
+            background: #0d2440;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .card {
+            background: #153653;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .card h3 {
+            color: var(--ciano);
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #d0deea;
+        }
+
+        .bonus {
+            text-align: center;
+        }
+
+        .bonus ul {
+            max-width: 650px;
+            margin: auto;
+            text-align: left;
+            list-style: none;
+        }
+
+        .bonus li {
+            background: #12314f;
+            padding: 16px 20px;
+            margin-bottom: 12px;
+            border-radius: 8px;
+        }
+
+        .futuros {
+            background: #0d2440;
+            text-align: center;
+        }
+
+        .futuros p {
+            color: var(--cinza);
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .compra {
+            text-align: center;
+            background: linear-gradient(
+                135deg,
+                #102c4a,
+                #08172e
+            );
+        }
+
+        .compra h2 {
+            font-size: 34px;
+        }
+
+        .compra p {
+            color: #d0deea;
+            margin-top: 15px;
+        }
+
+        .aviso {
+            font-size: 13px;
+            color: var(--cinza);
+            margin-top: 18px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 35px 8%;
+            background: #050e1c;
+            color: #aebed0;
+            font-size: 14px;
+        }
+
+        footer strong {
+            color: var(--ciano);
+        }
+
+        @media (max-width: 768px) {
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .hero {
+                padding: 65px 6%;
+            }
+
+            section {
+                padding: 50px 5%;
+            }
+
+            .produto {
+                grid-template-columns: 1fr;
+                padding: 25px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .capa h2 {
+                font-size: 27px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-<header><div class="wrap"><strong>DATA MAVI</strong><span>Educação digital • Edição 2026</span></div></header>
-<main>
-<section class="hero"><div class="wrap hero-grid"><div><div class="eyebrow">Guia digital para iniciantes</div><h1>Inteligência Artificial Descomplicada</h1><p class="lead">Aprenda a usar inteligência artificial no dia a dia, nos estudos e no trabalho — mesmo sem saber programar.</p><p>Um caminho simples para fazer perguntas melhores, ganhar organização e avaliar resultados com segurança.</p><a class="button" href="#comprar">Conhecer o e-book</a><p class="small">Por Margareth Braghini • Uma publicação Data Mavi</p></div><div class="book" role="img" aria-label="Capa ilustrativa do e-book Inteligência Artificial Descomplicada"><div class="brand">DATA MAVI / GUIA PRÁTICO</div><div><div class="name">INTELIGÊNCIA<br>ARTIFICIAL<br>DESCOMPLICADA</div><div class="line"></div><div>Do zero à prática</div></div><div class="author">MARGARETH BRAGHINI<br>SEM PRECISAR SABER PROGRAMAR</div></div></div></section>
-<section class="section"><div class="wrap"><span class="pill">Aprenda na prática</span><h2>O que você vai aprender</h2><div class="cards"><div class="card"><h3>Começar do zero</h3><p>Entenda o que é IA e como iniciar uma conversa com assistentes digitais.</p></div><div class="card"><h3>Fazer bons pedidos</h3><p>Use contexto, tarefa, formato e restrições para melhorar as respostas.</p></div><div class="card"><h3>Aplicar no cotidiano</h3><p>Organize tarefas, revise textos e planeje atividades com exemplos práticos.</p></div><div class="card"><h3>Trabalhar e estudar</h3><p>Explore roteiros, planilhas simples, revisão de conteúdos e exercícios.</p></div><div class="card"><h3>Usar com responsabilidade</h3><p>Aprenda a conferir informações e a proteger dados pessoais.</p></div><div class="card"><h3>Praticar por 7 dias</h3><p>Siga um plano curto para transformar conhecimento em hábito.</p></div></div></div></section>
-<section class="section alt"><div class="wrap"><h2>O que está incluído</h2><div class="cards"><div class="card"><h3>8 capítulos</h3><p>Explicações diretas e exercícios acessíveis para iniciantes.</p></div><div class="card"><h3>30 comandos prontos</h3><p>Copie, personalize e adapte exemplos para tarefas reais.</p></div><div class="card"><h3>Materiais extras</h3><p>Checklist de qualidade, modelos reutilizáveis e plano de 7 dias.</p></div></div></div></section>
-<section class="section" id="comprar"><div class="wrap offer"><span class="pill">E-book digital em PDF</span><h2>Comece a explorar a IA com confiança</h2><p>Conteúdo introdutório em português, para ler no celular, tablet ou computador.</p><div class="price">R$ 39,90</div><p><a id="comprar-link" class="button" href="#" aria-disabled="true" onclick="return false;">Compra em preparação</a></p><p class="note">O botão será ativado quando você adicionar seu link de checkout da Kiwify. Não há compra disponível nesta versão de demonstração.</p><p class="note">A entrega digital e as condições de pagamento serão informadas no checkout quando configurado.</p></div></section>
-<section class="section alt faq"><div class="wrap"><h2>Perguntas frequentes</h2><details><summary>Preciso saber programar?</summary><p>Não. O conteúdo foi elaborado para quem está começando e utiliza exemplos em linguagem simples.</p></details><details><summary>O material é físico?</summary><p>Não. É um e-book digital em PDF.</p></details><details><summary>Preciso pagar por ferramentas de IA?</summary><p>Não é necessário contratar uma assinatura para aprender os conceitos apresentados. Recursos e limites gratuitos podem mudar.</p></details><details><summary>Quem é a autora?</summary><p>Margareth Braghini. Uma publicação da Data Mavi.</p></details></div></section>
-</main><footer><div class="wrap"><strong>DATA MAVI</strong><p>© 2026 Data Mavi. Todos os direitos reservados.</p><p>Material educativo independente. Não afiliado aos fornecedores das ferramentas mencionadas.</p></div></footer>
-</body></html>
+
+    <!-- CABEÇALHO -->
+
+    <header>
+
+        <div class="logo">
+            DATA <span>MAVI</span> ACADEMY
+        </div>
+
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#ebooks">E-books</a>
+            <a href="#sobre">Sobre</a>
+        </nav>
+
+    </header>
+
+
+    <!-- APRESENTAÇÃO -->
+
+    <section class="hero" id="inicio">
+
+        <h1>
+            O conhecimento transforma.
+            <br>
+            <span>A tecnologia impulsiona.</span>
+        </h1>
+
+        <p>
+            Bem-vindo à Data Mavi Academy!
+
+            Uma plataforma de educação digital criada
+            para tornar o conhecimento sobre Inteligência
+            Artificial, tecnologia e produtividade
+            acessível a todos.
+
+            Aprenda no seu ritmo, de forma simples
+            e prática.
+        </p>
+
+        <a href="#ebooks" class="btn">
+            CONHEÇA NOSSOS E-BOOKS
+        </a>
+
+    </section>
+
+
+    <!-- PRIMEIRO E-BOOK -->
+
+    <section id="ebooks">
+
+        <h2 class="titulo">
+            Nosso <span>Primeiro Lançamento</span>
+        </h2>
+
+        <div class="produto">
+
+            <div class="capa">
+
+                <div class="marca">
+                    DATA MAVI ACADEMY
+                </div>
+
+                <h2>
+                    INTELIGÊNCIA
+                    ARTIFICIAL
+                    DESCOMPLICADA
+                </h2>
+
+                <p>
+                    Guia Prático para Iniciantes
+                </p>
+
+                <p style="margin-top:25px;">
+                    Aprenda a utilizar a IA
+                    no seu dia a dia.
+                </p>
+
+                <div class="autora">
+                    MARGARETH BRAGHINI
+                </div>
+
+            </div>
+
+
+            <div class="detalhes">
+
+                <h2>
+                    Inteligência Artificial
+                    Descomplicada
+                </h2>
+
+                <p>
+                    Descubra como utilizar ferramentas
+                    de Inteligência Artificial mesmo
+                    sem conhecimento técnico.
+                </p>
+
+                <p>
+                    Um guia desenvolvido para quem
+                    deseja aprender a usar a tecnologia
+                    para facilitar tarefas, organizar
+                    atividades e aumentar a produtividade.
+                </p>
+
+                <ul>
+                    <li>8 capítulos práticos</li>
+                    <li>Explicações simples e acessíveis</li>
+                    <li>Exemplos de aplicação da IA</li>
+                    <li>30 comandos prontos para utilizar</li>
+                    <li>Plano de aprendizagem de 7 dias</li>
+                    <li>Exercícios e materiais bônus</li>
+                </ul>
+
+                <div class="preco">
+                    R$ 39,90
+                </div>
+
+                <!-- CHECKOUT KIWIFY -->
+
+                <a
+                    href="https://pay.kiwify.com.br/bhtgPiN"
+                    class="btn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    COMPRAR AGORA
+                </a>
+
+                <p class="aviso">
+                    Pagamento processado pela Kiwify.
+                    Produto digital em formato PDF.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- BENEFÍCIOS -->
+
+    <section class="beneficios">
+
+        <h2 class="titulo">
+            Por que aprender <span>Inteligência Artificial?</span>
+        </h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>Economize Tempo</h3>
+
+                <p>
+                    Aprenda a utilizar a IA para
+                    organizar tarefas e facilitar
+                    atividades do cotidiano.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Aumente sua Produtividade</h3>
+
+                <p>
+                    Descubra maneiras práticas
+                    de utilizar ferramentas digitais
+                    no trabalho e nos estudos.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Aprenda do Zero</h3>
+
+                <p>
+                    Conteúdo acessível para iniciantes,
+                    sem necessidade de programação
+                    ou conhecimentos técnicos.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- BÔNUS -->
+
+    <section class="bonus">
+
+        <h2 class="titulo">
+            Você também recebe <span>Bônus Exclusivos</span>
+        </h2>
+
+        <ul>
+            <li>
+                🎁 Biblioteca com 30 comandos de IA
+                prontos para copiar e utilizar.
+            </li>
+
+            <li>
+                🎁 Plano prático de aprendizagem
+                de 7 dias.
+            </li>
+
+            <li>
+                🎁 Checklist para avaliar
+                respostas geradas por IA.
+            </li>
+
+            <li>
+                🎁 Modelos e exercícios para
+                colocar o conhecimento em prática.
+            </li>
+        </ul>
+
+    </section>
+
+
+    <!-- FUTUROS PRODUTOS -->
+
+    <section class="futuros">
+
+        <h2 class="titulo">
+            Em breve, <span>novos conhecimentos!</span>
+        </h2>
+
+        <p>
+            A Data Mavi Academy está preparando
+            novos conteúdos sobre Inteligência
+            Artificial, tecnologia, automação,
+            produtividade e transformação digital.
+
+            Nossa missão é tornar o aprendizado
+            acessível e aplicável ao mundo real.
+        </p>
+
+    </section>
+
+
+    <!-- CHAMADA FINAL -->
+
+    <section class="compra">
+
+        <h2>
+            Comece hoje sua jornada
+            com a Inteligência Artificial!
+        </h2>
+
+        <p>
+            Invista no seu conhecimento e descubra
+            novas possibilidades com a tecnologia.
+        </p>
+
+        <div class="preco">
+            R$ 39,90
+        </div>
+
+        <a
+            href="https://pay.kiwify.com.br/bhtgPiN"
+            class="btn"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            QUERO MEU E-BOOK AGORA
+        </a>
+
+        <p class="aviso">
+            Você será direcionado ao ambiente
+            de pagamento da Kiwify.
+        </p>
+
+    </section>
+
+
+    <!-- SOBRE -->
+
+    <section id="sobre">
+
+        <h2 class="titulo">
+            Sobre a <span>Data Mavi Academy</span>
+        </h2>
+
+        <p style="
+            max-width:800px;
+            margin:auto;
+            text-align:center;
+            color:#d0deea;
+        ">
+            A Data Mavi Academy é uma iniciativa
+            educacional da Data Mavi, dedicada
+            à democratização do conhecimento
+            sobre tecnologia e inovação.
+
+            Nossos materiais são desenvolvidos
+            com linguagem acessível e foco
+            na aplicação prática do conhecimento.
+
+            Autora do primeiro lançamento:
+            Margareth Braghini.
+        </p>
+
+    </section>
+
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+        <p>
+            <strong>DATA MAVI ACADEMY</strong>
+        </p>
+
+        <p>
+            Conhecimento que gera oportunidades.
+        </p>
+
+        <p style="margin-top:15px;">
+            © 2026 Data Mavi Academy.
+            Todos os direitos reservados.
+        </p>
+
+        <p>
+            Uma iniciativa Data Mavi.
+        </p>
+
+    </footer>
+
+</body>
+</html>
