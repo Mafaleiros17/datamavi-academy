@@ -5,18 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Data Mavi Academy | Educação Digital</title>
-
     <meta name="description"
           content="Data Mavi Academy: e-books e conteúdos práticos sobre Inteligência Artificial, tecnologia e produtividade.">
 
+    <title>Data Mavi Academy | Educação Digital</title>
+
     <style>
         :root {
-            --azul: #08172e;
-            --azul-claro: #102b4d;
-            --ciano: #00c8e8;
+            --azul: #0b1730;
+            --azul-claro: #142c4b;
+            --ciano: #12c8e8;
             --branco: #ffffff;
-            --cinza: #aebed0;
+            --cinza: #d2dce8;
             --dourado: #f5c76b;
         }
 
@@ -24,6 +24,10 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -34,19 +38,19 @@
         }
 
         header {
-            padding: 25px 8%;
+            padding: 24px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 20px;
             flex-wrap: wrap;
-            gap: 15px;
-            border-bottom: 1px solid #24405e;
+            border-bottom: 1px solid #29415e;
         }
 
         .logo {
-            font-size: 25px;
+            font-size: 24px;
             font-weight: bold;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
         }
 
         .logo span {
@@ -57,26 +61,30 @@
             color: white;
             text-decoration: none;
             margin-left: 20px;
-            font-size: 14px;
         }
 
         nav a:hover {
             color: var(--ciano);
         }
 
+        section {
+            padding: 70px 8%;
+        }
+
         .hero {
             text-align: center;
-            padding: 85px 8%;
+            padding: 90px 8%;
             background: linear-gradient(
                 135deg,
-                #08172e,
-                #123b63
+                #08152c,
+                #17456d
             );
         }
 
         .hero h1 {
             font-size: clamp(32px, 5vw, 52px);
-            margin-bottom: 20px;
+            line-height: 1.2;
+            margin-bottom: 25px;
         }
 
         .hero h1 span {
@@ -86,34 +94,32 @@
         .hero p {
             max-width: 750px;
             margin: auto;
+            color: var(--cinza);
             font-size: 18px;
-            color: #d1deeb;
         }
 
         .btn {
             display: inline-block;
             background: var(--dourado);
             color: #08172e;
-            padding: 16px 32px;
-            margin-top: 30px;
-            border-radius: 8px;
+            padding: 17px 32px;
+            margin-top: 28px;
+            border-radius: 9px;
             text-decoration: none;
             font-weight: bold;
-            transition: 0.3s;
+            font-size: 17px;
+            text-align: center;
+            transition: 0.2s;
         }
 
         .btn:hover {
-            background: #ffe09b;
+            background: #ffe3a4;
             transform: translateY(-2px);
-        }
-
-        section {
-            padding: 70px 8%;
         }
 
         .titulo {
             text-align: center;
-            font-size: 32px;
+            font-size: clamp(27px, 4vw, 36px);
             margin-bottom: 40px;
         }
 
@@ -122,7 +128,7 @@
         }
 
         .produto {
-            max-width: 1050px;
+            max-width: 1100px;
             margin: auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -137,35 +143,36 @@
             background: linear-gradient(
                 145deg,
                 #071326,
-                #164a78
+                #174b78
             );
-            border: 2px solid #2378a4;
+            border: 2px solid #2586b0;
             border-radius: 12px;
-            padding: 55px 25px;
+            padding: 60px 25px;
             text-align: center;
             box-shadow: 0 15px 35px #0005;
         }
 
         .capa .marca {
             color: var(--ciano);
-            font-size: 15px;
             letter-spacing: 3px;
+            font-size: 14px;
         }
 
         .capa h2 {
-            font-size: 32px;
+            font-size: clamp(26px, 4vw, 36px);
             line-height: 1.2;
             margin: 35px 0 20px;
+            overflow-wrap: anywhere;
         }
 
         .capa p {
-            color: #c6e8f3;
+            color: #d5eaf5;
         }
 
         .capa .autora {
             margin-top: 45px;
-            font-size: 13px;
             color: var(--dourado);
+            font-size: 14px;
         }
 
         .detalhes h2 {
@@ -174,8 +181,8 @@
         }
 
         .detalhes p {
-            color: #d4e0ed;
-            margin-bottom: 20px;
+            color: var(--cinza);
+            margin-bottom: 18px;
         }
 
         .detalhes ul {
@@ -194,26 +201,31 @@
         }
 
         .preco {
-            font-size: 38px;
+            font-size: 42px;
             color: var(--dourado);
             font-weight: bold;
-            margin-top: 20px;
+        }
+
+        .aviso {
+            font-size: 13px;
+            color: var(--cinza);
+            margin-top: 16px;
         }
 
         .beneficios {
-            background: #0d2440;
+            background: #0e2440;
         }
 
         .cards {
+            max-width: 1100px;
+            margin: auto;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 25px;
-            max-width: 1100px;
-            margin: auto;
         }
 
         .card {
-            background: #153653;
+            background: #173653;
             padding: 30px;
             border-radius: 12px;
             text-align: center;
@@ -225,7 +237,7 @@
         }
 
         .card p {
-            color: #d0deea;
+            color: var(--cinza);
         }
 
         .bonus {
@@ -233,59 +245,60 @@
         }
 
         .bonus ul {
-            max-width: 650px;
+            max-width: 680px;
             margin: auto;
             text-align: left;
             list-style: none;
         }
 
         .bonus li {
-            background: #12314f;
-            padding: 16px 20px;
+            background: #15314f;
+            padding: 18px 22px;
             margin-bottom: 12px;
-            border-radius: 8px;
+            border-radius: 9px;
         }
 
         .futuros {
-            background: #0d2440;
             text-align: center;
+            background: #0e2440;
         }
 
         .futuros p {
-            color: var(--cinza);
-            max-width: 650px;
+            max-width: 720px;
             margin: auto;
+            color: var(--cinza);
         }
 
         .compra {
             text-align: center;
             background: linear-gradient(
                 135deg,
-                #102c4a,
+                #12385b,
                 #08172e
             );
         }
 
         .compra h2 {
-            font-size: 34px;
+            font-size: clamp(28px, 4vw, 38px);
         }
 
         .compra p {
-            color: #d0deea;
+            color: var(--cinza);
             margin-top: 15px;
         }
 
-        .aviso {
-            font-size: 13px;
+        .sobre p {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
             color: var(--cinza);
-            margin-top: 18px;
         }
 
         footer {
             text-align: center;
-            padding: 35px 8%;
             background: #050e1c;
-            color: #aebed0;
+            color: #b5c3d2;
+            padding: 35px 8%;
             font-size: 14px;
         }
 
@@ -303,12 +316,12 @@
                 margin: 0 8px;
             }
 
-            .hero {
-                padding: 65px 6%;
+            section {
+                padding: 55px 6%;
             }
 
-            section {
-                padding: 50px 5%;
+            .hero {
+                padding: 70px 6%;
             }
 
             .produto {
@@ -320,8 +333,8 @@
                 grid-template-columns: 1fr;
             }
 
-            .capa h2 {
-                font-size: 27px;
+            .btn {
+                max-width: 100%;
             }
         }
     </style>
@@ -332,7 +345,6 @@
     <!-- CABEÇALHO -->
 
     <header>
-
         <div class="logo">
             DATA <span>MAVI</span> ACADEMY
         </div>
@@ -342,7 +354,6 @@
             <a href="#ebooks">E-books</a>
             <a href="#sobre">Sobre</a>
         </nav>
-
     </header>
 
 
@@ -358,14 +369,12 @@
 
         <p>
             Bem-vindo à Data Mavi Academy!
-
             Uma plataforma de educação digital criada
             para tornar o conhecimento sobre Inteligência
             Artificial, tecnologia e produtividade
             acessível a todos.
 
-            Aprenda no seu ritmo, de forma simples
-            e prática.
+            Aprenda no seu ritmo, de forma simples e prática.
         </p>
 
         <a href="#ebooks" class="btn">
@@ -392,8 +401,8 @@
                 </div>
 
                 <h2>
-                    INTELIGÊNCIA
-                    ARTIFICIAL
+                    INTELIGÊNCIA<br>
+                    ARTIFICIAL<br>
                     DESCOMPLICADA
                 </h2>
 
@@ -446,7 +455,7 @@
                     R$ 39,90
                 </div>
 
-                <!-- CHECKOUT KIWIFY -->
+                <!-- CHECKOUT KIWIFY ATIVO -->
 
                 <a
                     href="https://pay.kiwify.com.br/bhtgPiN"
@@ -454,7 +463,7 @@
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    COMPRAR AGORA
+                    COMPRAR AGORA — R$ 39,90
                 </a>
 
                 <p class="aviso">
@@ -474,45 +483,37 @@
     <section class="beneficios">
 
         <h2 class="titulo">
-            Por que aprender <span>Inteligência Artificial?</span>
+            Por que aprender
+            <span>Inteligência Artificial?</span>
         </h2>
 
         <div class="cards">
 
             <div class="card">
-
                 <h3>Economize Tempo</h3>
-
                 <p>
                     Aprenda a utilizar a IA para
                     organizar tarefas e facilitar
                     atividades do cotidiano.
                 </p>
-
             </div>
 
             <div class="card">
-
                 <h3>Aumente sua Produtividade</h3>
-
                 <p>
                     Descubra maneiras práticas
                     de utilizar ferramentas digitais
                     no trabalho e nos estudos.
                 </p>
-
             </div>
 
             <div class="card">
-
                 <h3>Aprenda do Zero</h3>
-
                 <p>
                     Conteúdo acessível para iniciantes,
                     sem necessidade de programação
                     ou conhecimentos técnicos.
                 </p>
-
             </div>
 
         </div>
@@ -525,7 +526,8 @@
     <section class="bonus">
 
         <h2 class="titulo">
-            Você também recebe <span>Bônus Exclusivos</span>
+            Você também recebe
+            <span>Bônus Exclusivos</span>
         </h2>
 
         <ul>
@@ -558,7 +560,8 @@
     <section class="futuros">
 
         <h2 class="titulo">
-            Em breve, <span>novos conhecimentos!</span>
+            Em breve,
+            <span>novos conhecimentos!</span>
         </h2>
 
         <p>
@@ -592,6 +595,8 @@
             R$ 39,90
         </div>
 
+        <!-- SEGUNDO BOTÃO DE CHECKOUT -->
+
         <a
             href="https://pay.kiwify.com.br/bhtgPiN"
             class="btn"
@@ -611,18 +616,13 @@
 
     <!-- SOBRE -->
 
-    <section id="sobre">
+    <section class="sobre" id="sobre">
 
         <h2 class="titulo">
             Sobre a <span>Data Mavi Academy</span>
         </h2>
 
-        <p style="
-            max-width:800px;
-            margin:auto;
-            text-align:center;
-            color:#d0deea;
-        ">
+        <p>
             A Data Mavi Academy é uma iniciativa
             educacional da Data Mavi, dedicada
             à democratização do conhecimento
